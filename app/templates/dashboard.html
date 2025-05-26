@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="card-title">Hello, {{ current_user.username }}!</h2>
+    <p class="card-text">You are logged in as <strong>{{ current_user.role.value }}</strong>.</p>
+    <p class="text-muted">Use the navigation bar to access features.</p>
+  </div>
+</div>
+{% endblock %}

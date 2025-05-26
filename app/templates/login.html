@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-4">
+    <div class="card shadow-sm mt-5">
+      <div class="card-header text-center bg-primary text-white">
+        <h4>Login</h4>
+      </div>
+      <div class="card-body">
+        <form method="POST" autocomplete="off">
+          {{ form.hidden_tag() }}
+          <div class="mb-3">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control", placeholder="Enter email") }}
+          </div>
+          <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control", placeholder="Enter password") }}
+          </div>
+          <div class="d-grid">
+            {{ form.submit(class="btn btn-primary") }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
